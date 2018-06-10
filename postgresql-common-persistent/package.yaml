@@ -21,20 +21,13 @@ description:         Please see the README on GitHub at <https://github.com/iand
 
 dependencies:
 - base >= 4.7 && < 5
+- bytestring
+- persistent
+- postgresql-common
+- text
 
 library:
   source-dirs: src
-
-executables:
-  postgresql-common-persistent-exe:
-    main:                Main.hs
-    source-dirs:         app
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - postgresql-common-persistent
 
 tests:
   postgresql-common-persistent-test:
