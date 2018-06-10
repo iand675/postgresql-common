@@ -18,6 +18,11 @@ import Data.Attoparsec.ByteString.Char8
 data LSN = LSN !Word32 {- ^ Filepart -} !Word32 {- ^ Offset -}
   deriving (Show, Eq)
 
+instance Ord LSN where
+  compare (LSN l0 r0) (LSN l1 r1)
+    | l0 > l1 || (l0 == l1 && r0 > r1) = GT
+    | l0 < l1 || (l0 == l1 && r0 < r1) = LT
+    | otherwise = EQ
 
 lsnParser :: Parser LSN
 lsnParser = LSN <$> (hexadecimal <* char '/') <*> hexadecimal
