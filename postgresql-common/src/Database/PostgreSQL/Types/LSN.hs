@@ -1,3 +1,4 @@
+{-# LANGUAGE BangPatterns #-}
 module Database.PostgreSQL.Types.LSN
     ( LSN(..)
     -- * Utilities
@@ -14,8 +15,10 @@ import Data.Monoid ((<>))
 import Data.Word
 import Data.Attoparsec.ByteString.Char8
 
--- TODO Ord instance
-data LSN = LSN !Word32 {- ^ Filepart -} !Word32 {- ^ Offset -}
+data LSN = LSN
+  { filepart :: !Word32 -- ^ Filepart
+  , offset :: !Word32 -- ^ Offset
+  }
   deriving (Show, Eq)
 
 instance Ord LSN where

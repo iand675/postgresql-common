@@ -1,6 +1,6 @@
 name:                postgresql-common-persistent
 version:             0.1.0.0
-github:              "iand675/postgresql-common-persistent"
+github:              "iand675/postgresql-common"
 license:             BSD3
 author:              "Ian Duncan"
 maintainer:          "ian@iankduncan.com"
@@ -11,7 +11,7 @@ extra-source-files:
 - ChangeLog.md
 
 # Metadata used when publishing your package
-# synopsis:            Short description of your package
+synopsis:            Persistent compatibility for postgresql-common
 # category:            Web
 
 # To avoid duplicated efforts in documentation and dealing with the

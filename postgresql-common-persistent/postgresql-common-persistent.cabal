@@ -2,13 +2,14 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 677d4870c0161408b463ef840a132a006a72899f8307b1d08200acc89e304ebe
+-- hash: 479b4f48750c8668063e5a74af51be88a8553157b555f5a1c6463950323c865e
 
 name:           postgresql-common-persistent
 version:        0.1.0.0
+synopsis:       Persistent compatibility for postgresql-common
 description:    Please see the README on GitHub at <https://github.com/iand675/postgresql-common-persistent#readme>
-homepage:       https://github.com/iand675/postgresql-common-persistent#readme
-bug-reports:    https://github.com/iand675/postgresql-common-persistent/issues
+homepage:       https://github.com/iand675/postgresql-common#readme
+bug-reports:    https://github.com/iand675/postgresql-common/issues
 author:         Ian Duncan
 maintainer:     ian@iankduncan.com
 copyright:      Ian Duncan
@@ -22,7 +23,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/iand675/postgresql-common-persistent
+  location: https://github.com/iand675/postgresql-common
 
 library
   exposed-modules:
